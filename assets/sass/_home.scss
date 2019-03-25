@@ -1,0 +1,63 @@
+
+
+
+.header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+
+    &__logo{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+
+        // @media (max-width :450px){
+        //     top: 5%;
+        //     left: 5%;
+        
+        // }
+
+        &--image{
+            height: 3.5rem;
+        }
+    }
+
+    &__content{
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+
+        &--img{
+            background-position: top;
+        }
+
+        &--text{
+            margin-top: 3rem;
+            color: #2c3e50;
+            text-transform: uppercase;
+
+            &-main{
+                letter-spacing: 2.5rem;
+                font-size: 4rem;
+            }
+            &-sub{
+                margin-top: 2rem;
+                font-size: 2rem;
+                text-align: justify;
+
+                &-1{
+                    font-size: 2rem;
+                    display: block;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
+

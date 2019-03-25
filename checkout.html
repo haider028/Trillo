@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRILLO</title>
+    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="img/png" href="assets/images/favicon-trans.png">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+        <nav class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+                <div class="navigation__icon">&nbsp;</div>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="about.html" class="navigation__link">About trillo</a></li>
+                    <li class="navigation__item"><a href="service.html" class="navigation__link">Our Services</a></li>
+                    <li class="navigation__item"><a href="contact.html" class="navigation__link">Contact Us</a></li>
+                    <li class="navigation__item"><a href="course.html" class="navigation__link">Courses</a></li>
+                    <li class="navigation__item"><a href="price.html" class="navigation__link">Pricing</a></li>
+                    <li class="navigation__item"><a href="team.html" class="navigation__link">Our team</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <header class="checkout__header">
+        <h2 class="checkout__header--title">your checkout</h2>
+        <h3 class="checkout__header--breadcrumb">Home / shop / checkout</h3>
+    </header>
+
+    <main>
+        <div class="payment">
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="payment--box">
+                            <span class="payment--box-paymethod">Payment method :</span>
+                            <img src="assets/images/payment.png" alt="payment-image" class="payment--box-image">
+                            <br><br><br>
+                            <div class="payment--box-inputfield">
+                                <form action="#">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-credit-card"></i></span>
+                                    </div>
+                                    <input required type="text" id="input-cc" class="form-control payment--box-input" placeholder="Card number" aria-label="Username" aria-describedby="basic-addon1"><br>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar-week"></i></span>
+                                    </div>
+                                    <input required type="text" id="input-dd" class="form-control payment--box-input" placeholder="Date of Birth YYYY-MM-DD" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                    </div>
+                                    <input required type="text" id="input-ss" class="form-control payment--box-input" placeholder="Security Code" aria-label="Username" aria-describedby="basic-addon1"><br>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-tie"></i></span>
+                                    </div>
+                                    <input required type="text" id="input-name" class="form-control payment--box-input" placeholder="Name on Card" aria-label="Username" aria-describedby="basic-addon1"><br>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" aria-label="Checkbox for following text input"> Remember This Card?
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <button type="submit" class="btn btn-primary btn-block mt-2 mr-5">Complete Payment</button>
+                                <!-- <a type="submit" href="#" class="payment--box-button" id="payment-button"> Complete Payment</a> -->
+
+                            </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    
+
+
+
+
+    <script src="assets/javascript/cleave.js"></script>
+    <script>
+        var cleave = new Cleave('#input-cc', {
+        creditCard: true,
+        onCreditCardTypeChanged: function (type) {
+            // update UI ...
+        }
+        });
+    
+        var cleave = new Cleave('#input-dd', {
+        date: true,
+        delimiter: '-',
+        datePattern: ['Y', 'm', 'd']
+        });
+
+        var cleave = new Cleave('#input-ss', {
+            blocks: [4, 3, 3, 4],
+            uppercase: true
+        });
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- custom javascript -->
+    <script src="assets/javascript/custom.js"></script> 
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+
+.mission{
+    width: 100%;
+    height: 100vh;
+    margin: 10rem auto;
+
+
+    &__title{
+        text-align: center;
+        text-transform: uppercase;
+
+        &-head{
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            animation: blur-out 1s ease-in-out;
+        }
+        &-text{
+            font-weight: 700;
+            font-size: 6rem;
+            margin: 5% 0;
+            animation: down-up 1s ease-in-out;
+
+            @media only screen and (max-width:990px){
+                font-weight: 700;
+                font-size: 5rem !important;
+                margin: 5rem 0;
+            }
+            @media only screen and (max-width:768px){
+                font-weight: 700;
+                font-size: 4rem !important;
+                margin: 5rem 0;
+            }
+            @media only screen and (max-width:576px){
+                font-weight: 500;
+                font-size: 3rem !important;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
+
+.about{
+    margin: 3rem 0;
+    // background-color: aqua;
+
+    &__text{
+
+        &-head{
+            letter-spacing: 2rem;
+            text-align: center;
+            font-size: 8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 6rem;
+
+            @media only screen and (max-width:500px){
+                font-size: 4rem;
+                font-weight: 500;
+            }
+        }
+        &-content{
+            padding : 1rem 0;
+            font-size: 2rem;
+            color: #2f3640;
+            font-weight: 300;
+            text-align: justify;
+        }
+        
+    }
+}
+
+.trillo{
+    text-decoration: none;
+    color: #2f3640;
+    font-weight: 500;
+    font-size: 3rem;
+
+
+    &:hover{
+        text-decoration: none;
+        color: $text-main;
+        text-shadow: 0 .5rem 1rem $text-main;
+    }
+}
+
+
+
+
+
+
+
+
+.block{
+    display: block;
+}

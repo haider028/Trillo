@@ -1,0 +1,164 @@
+.navigation{
+
+&__checkbox{
+    display: none; 
+}
+
+//background-color behind the white button less z-index than all others
+&__background{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#54abe6, #3498db);
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem; 
+    z-index: 1000;
+
+    @media only screen and (max-width:400px){
+        top: 3.5rem;
+        right: 3.5rem; 
+    }
+
+    -webkit-transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    // transform: scale(80);
+}
+
+//the white button that z-index most of the top , always visibale to the user and its also fixed position
+&__button{
+    height: 7rem;
+    width: 7rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3em rgba(#000, .5);
+    text-align: center;
+
+    @media only screen and (max-width:400px){
+        top: 3rem;
+        right: 3rem; 
+    }
+    
+}
+
+
+// the list parent class the &__nav cover all screen with and hight
+&__nav{
+    height: 100vh;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    display: none;
+    
+    width: 0%;
+    -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+// the links or list inside this list class its position is center
+&__list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    
+}
+
+&__item{
+    margin: 2rem;
+    
+}
+
+// the menu links
+&__link{
+
+    &:link,
+    &:visited{
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%); //background-gradient
+    background-size: 230%; // background-size the 230 times which goes out of the and not visible to the user
+    transition: all .4s ease-in-out;
+
+
+    @media only screen and (max-width:400px){
+        font-size: 3rem;
+        padding: .5rem .5rem;
+    }
+    }
+
+    &:hover,
+    &:active{
+        background-position:100%; // whenever hover the links its show white white background color which is white .
+        color: #54abe6;
+        box-shadow: 0 1rem 2rem rgba(#000, .8);
+    }
+    
+}
+
+&__checkbox:checked ~ &__background{
+    transform: scale(80);
+}
+
+
+&__checkbox:checked ~ &__nav{
+    animation: 2s naviagtion-animation ease-in-out;
+    display: block;
+    width: 100%;
+}
+
+&__icon{
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after{
+        display: inline-block;
+        width: 3rem;
+        height: .2rem;
+        background-color: #333;
+        
+    }
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;  
+        left: 0;
+        transition: all .2s;
+    }
+
+    &::before{top:-.8rem;}
+    &::after{top:.8rem;}
+}
+
+&__button:hover &__icon::before{
+    top: -1rem;
+}
+&__button:hover &__icon::after{
+    top: 1rem;
+}
+
+&__checkbox:checked + &__button &__icon{
+    background-color: transparent;
+}
+&__checkbox:checked + &__button &__icon::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+&__checkbox:checked + &__button &__icon::after{
+    top: 0;
+    transform: rotate(-135deg);
+}
+}

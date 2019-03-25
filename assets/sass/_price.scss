@@ -1,0 +1,111 @@
+
+
+.price{
+    &__title{
+        position: relative;
+        width:50vw;
+        height: auto;
+        margin: 10% auto;
+        text-align: center;
+        
+
+        
+
+        &--main{
+            font-size: 4rem;
+            color: $text-main;
+            font-weight: 500;
+            letter-spacing: .8rem;
+            animation: blur-out 1s ease-in-out;
+            z-index: 100;
+            position: relative;
+            @media (max-width:400px){
+                font-size: 2rem;
+            }
+
+            &::before{
+                position:absolute;
+                top:-10rem;
+                left: 0;
+                content: "PACKAGE";
+                font-size: 20rem;
+                z-index: -1;
+                opacity: .1;
+
+                @media (max-width:1200px){
+                    display: none;
+                }
+            }
+        }
+        
+    }
+
+    &__section{
+        margin-bottom: 10rem;
+    }
+
+
+
+    &__box{
+        margin: 0 auto;
+    }
+}
+
+.card{
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba($text-main, .8);
+    transition: all .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        position: absolute;
+        top: -2%;
+        left:-10%;
+        content: "";
+        background-image: linear-gradient(to right, rgba($primary-dark, .8), rgba($primary-dark, .8));
+        width: 10rem;
+        height: 10rem;
+        transform: rotate(75deg);
+    }
+
+    &:hover{
+        box-shadow: 0 2rem 3rem rgba($text-main, 1);
+    }
+
+
+    &-title{
+        font-size: 3rem;
+        color: $primary-dark;
+        font-weight: 500;
+        padding:5rem 0;
+    }
+    &-list{
+        list-style: none;
+
+        &-item{
+            font-size: 1.6rem;
+            color: $text-sub;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    &-price{
+        padding-bottom: 2rem;
+
+        &-main{
+            font-size: 4rem;
+            font-weight: 700;
+            color: $primary-dark;
+        }
+        &-sub{
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: $text-sub;
+        }
+    }
+    &-button{
+        font-size: 1.6rem;
+        margin-bottom: 6rem;
+    }
+}

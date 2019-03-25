@@ -1,0 +1,64 @@
+
+.signup__box{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(105deg, rgba(#f9f9f9, .9) 0%, rgba(#f9f9f9, .9) 50%, $primary-light 50%);
+}
+.form__box{
+    width: 40rem;
+    height: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+
+    &--title{
+        &-main{
+            text-transform: capitalize;
+            color: #222;
+            display: block;
+            font-size: 3rem;
+
+            @media only screen and (max-width){
+                padding-left: 2rem;
+            }
+        }
+        &-sub{
+            color: #778ca3;
+            display: block;
+            font-size: 1.6rem;
+            margin: 2rem 0;
+
+            @media only screen and (max-width){
+                padding-left: 2rem;
+            }
+        }
+
+    }
+}
+
+form{
+    padding: 0 4rem ;
+}
+
+form label{
+    font-size: 1.5rem;
+}
+
+.signup:focus:invalid{
+    border-bottom: 2px solid #ff3838;
+}
+
+.signup:focus{
+    outline-color: transparent;
+}
+
+.signup{
+    padding: 1.5rem 1rem !important;
+}
+
+

@@ -1,0 +1,126 @@
+
+.career{
+    margin-top: 8rem;
+    margin-left: 5rem;
+    animation: blur-out 1s ease-in-out;
+
+    &-title1{
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-align: justify;
+    }
+    &-title2{
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+    }
+    &-title3{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $text-main;
+        display: inline-block;
+    }
+
+    &__quote{
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        border-bottom: 1px solid #bdc3c7;
+
+        @media only screen and (max-width: 700px){
+            width: 80%;
+        }
+
+        &--text{
+            font-size: 4rem;
+            font-weight: 700;
+            animation: down-up 1s ease-in;
+
+            @media only screen and (max-width: 500px){
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.position__quote{
+        
+    text-align: center;
+    width: 60%;
+    margin: 15rem auto;
+
+    @media only screen and (max-width: 700px){
+        width: 80%;
+    }
+    &--title{
+        font-size: 4rem;
+        font-weight: 700;
+
+        @media only screen and (max-width: 500px){
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    &--text{
+        font-size: 2rem;
+        font-weight: 400;
+        color: $text-sub;
+        margin-top: 3rem;
+    }
+
+}
+
+
+.positions{
+    
+    &__card{
+        border: 1px solid #95a5a6;
+        padding-top:2rem;
+        padding-bottom: 2rem;
+        padding-left: 3rem;
+        transition: .5s all ease-out;
+
+        @media only screen and (max-width:576px){
+            margin-top: 2rem;
+        }
+
+        &--number{
+            font-size: 7rem;
+            font-weight: 700;
+            color: #95a5a6;
+        }
+        &--title{
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        &--city{
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        &--link{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.positions__card:hover{
+    background-color: $primary-light;
+}
+
+.positions__card:hover .positions__card--number{
+    color: #fff;
+}
+.positions__card:hover .positions__card--title{
+    color: #fff;
+}
+.positions__card:hover .positions__card--city{
+    color: #fff;
+}
+.positions__card:hover .positions__card--link{
+    color: #fff;
+}

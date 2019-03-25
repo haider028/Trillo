@@ -1,0 +1,101 @@
+
+.blog__header{
+    margin-top: 5rem;
+    text-align: center;
+
+    &--title{
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 1.3rem;
+        font-family: 'Luckiest Guy', cursive;
+        margin-bottom: 6rem;
+        animation: blur-out 1s ease-in-out;
+    }
+}
+
+.search{
+    &--input{
+        width: 30%;
+        height: 3rem;
+        border-radius: .5rem;
+        outline: none;
+        box-shadow: 0 .5rem 2rem rgba($text-main, .5);
+        font-size: 1.5rem;
+        padding-left: 3rem;
+
+        &:focus{
+            border: 1px solid $primary-dark;
+        }
+
+        @media only screen and (max-width:800px){
+            width: 80%;
+        }
+        &::-webkit-input-placeholder{
+            padding: .7rem;
+            padding-left: 2rem;
+        }
+
+        
+    }
+    &--button{
+        margin-left: 2rem;
+        font-size: 2rem;
+        color: #fff;
+        margin-right: 0;
+        background-color: $primary-dark;
+        font-weight: 900;
+        padding: .5rem;
+        
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+}
+
+.blog--main{
+    margin-top: 6rem;
+
+    &-box{
+        background-image: linear-gradient(rgba($primary-dark, .3), rgba($primary-light, .6))
+        ,url(../images/blog-main.jpg);
+        height: 40rem;
+        background-position: center;
+        background-size: cover;
+        border-radius: 2rem;
+        position: relative;
+
+        &-text{
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            font-size: 5rem;
+            color: #fff;
+            font-weight: 500;
+            transform: translate(-50%, -40%);
+
+            @media only screen and (max-width:576px){
+                font-size: 3rem;
+            }
+        }
+    }
+
+}
+
+
+.blog__post{
+    padding-bottom: 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba($text-sub, .3);
+
+    &-title{
+        font-size: 3rem;
+        font-weight: 700;
+        padding: 2rem 0;
+    }
+    &-text{
+        text-align: justify;
+        padding: 0 2rem;
+    }
+}

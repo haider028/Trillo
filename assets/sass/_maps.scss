@@ -1,0 +1,64 @@
+.maps__header{
+
+    &--text{
+        text-align: center;
+        margin-top: 5rem;
+
+        &-1{
+            font-size: 8rem;
+            font-weight: 500;
+            letter-spacing: 1rem;
+            animation: blur-out 1s ease-in-out;
+
+            @media only screen and (max-width:400px){
+                font-size: 6rem;
+                font-weight: 400;
+                letter-spacing: .8rem;
+            }
+        }
+        &-2{
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: .8rem;
+            animation: blur-out 1s ease-in-out;
+            animation-delay: .3s ;
+            animation-fill-mode: backwards;
+
+            @media only screen and (max-width:400px){
+                font-size: 4rem;
+                font-weight: 300;
+                letter-spacing: .6rem;
+            }
+        }
+    }
+}
+
+.locations{
+    margin-top: 15rem;
+
+    &__block{
+        display: inline-block;
+        border-right: 1px solid #95a5a6;
+        height: auto;
+        padding-right: 2rem;
+        border-bottom: 1px solid #95a5a6;
+        width: 100%;
+        animation: down-up 1s ease-in-out;
+
+        &--title{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: $text-main;
+        }
+        &--phone{
+            font-size: 1.6rem;
+            color: $text-sub;
+        }
+    }
+}
+
+#maps{
+    height: 40rem;
+    width: 100%;
+}
