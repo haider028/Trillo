@@ -38,13 +38,23 @@ body {
       .header__content--text-main {
         letter-spacing: 2.5rem;
         font-size: 4rem; }
+        @media only screen and (max-width: 400px) {
+          .header__content--text-main {
+            letter-spacing: 1.5rem;
+            font-size: 2rem; } }
       .header__content--text-sub {
         margin-top: 2rem;
         font-size: 2rem;
         text-align: justify; }
+        @media only screen and (max-width: 400px) {
+          .header__content--text-sub {
+            font-size: 1.6rem; } }
         .header__content--text-sub-1 {
           font-size: 2rem;
           display: block; }
+          @media only screen and (max-width: 400px) {
+            .header__content--text-sub-1 {
+              font-size: 1.6rem; } }
 
 .navigation__checkbox {
   display: none; }
@@ -60,6 +70,10 @@ body {
   z-index: 1000;
   -webkit-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media only screen and (max-width: 400px) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__button {
   height: 7rem;
@@ -72,6 +86,10 @@ body {
   z-index: 2000;
   box-shadow: 0 1rem 3em rgba(0, 0, 0, 0.5);
   text-align: center; }
+  @media only screen and (max-width: 400px) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -105,6 +123,10 @@ body {
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 230%;
   transition: all .4s ease-in-out; }
+  @media only screen and (max-width: 400px) {
+    .navigation__link:link, .navigation__link:visited {
+      font-size: 3rem;
+      padding: .5rem .5rem; } }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
@@ -204,11 +226,17 @@ p {
     color: #222;
     display: block;
     font-size: 3rem; }
+    @media only screen and (max-width) {
+      .form__box--title-main {
+        padding-left: 2rem; } }
   .form__box--title-sub {
     color: #778ca3;
     display: block;
     font-size: 1.6rem;
     margin: 2rem 0; }
+    @media only screen and (max-width) {
+      .form__box--title-sub {
+        padding-left: 2rem; } }
 
 form {
   padding: 0 4rem; }
@@ -770,6 +798,10 @@ form label {
       animation-delay: .5s;
       animation-fill-mode: backwards; }
 
+@media only screen and (max-width: 400px) {
+  .team__section {
+    margin-top: 8rem; } }
+
 .team__member {
   padding-bottom: 5px;
   text-align: center;
@@ -843,6 +875,7 @@ form label {
       color: #778ca3; }
 
 #maps {
+  margin-bottom: 4rem;
   height: 40rem;
   width: 100%; }
 
@@ -1029,10 +1062,13 @@ form label {
       padding-right: 3rem; }
       @media only screen and (max-width: 400px) {
         .payment--box-inputfield {
-          padding-left: 0;
-          padding-right: 0; } }
+          padding-left: 0 !important;
+          padding-right: 0 !important; } }
     .payment--box-input {
-      padding: 1.8rem !important; }
+      padding: 1.8 !important; }
+      @media only screen and (max-width: 400px) {
+        .payment--box-input {
+          padding: 0; } }
 
 .btn-block {
   background-color: #3498db !important;
