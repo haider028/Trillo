@@ -284,7 +284,6 @@ form label {
 
 .price__section {
   margin-bottom: 10rem; }
-
 .price__box {
   margin: 0 auto; }
 
@@ -764,8 +763,6 @@ form label {
 .positions__card:hover .positions__card--link {
   color: #fff; }
 
-.team__header {
-  height: 100vh; }
   .team__header--main {
     margin-top: 10rem;
     margin-left: 8rem; }
