@@ -763,6 +763,9 @@ form label {
 .positions__card:hover .positions__card--link {
   color: #fff; }
 
+.team__header{
+  margin-bottom: 10rem;
+}
   .team__header--main {
     margin-top: 10rem;
     margin-left: 8rem; }
